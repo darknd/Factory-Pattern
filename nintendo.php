@@ -11,9 +11,9 @@ class Nintendo
                 return new Nes($bits);
             case 'snes':
                 return new Snes($bits);
-            default:
-                return new Exception("No Nintendo found with that bits o_O");
         }
+        
+        throw new Exception("No Nintendo found with that bits o_O");
     }
 
     public function getType()
